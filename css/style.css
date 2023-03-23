@@ -2,8 +2,10 @@
   Name: Arielle Bosshard
   Student Id: 47182946
   
-  You may change anything you like in this file 
 */
+
+/*** GENERAL STYLES ***/
+
 html {
   color: #222;
   font-size: 1em;
@@ -15,31 +17,30 @@ body {
   margin: 0;
 }
 
-a {
+h1, h2, h3, p, a {
   text-decoration: none;
-  color: #fff;
+  color: #373A36;
+  padding: 0;
+  margin: 0;
 }
 
 a:hover, a:active, .currentpage {
   color: #A6192E;
 }
 
-ul {
-  list-style: none;
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
 }
 
-header {
-  text-align: center;
-  background: url("https://webresources.mq.edu.au/thisweek/wp-content/uploads/2018/02/Macquarie_University_Central_Courtyard_1.jpg"), linear-gradient(#6F1D46, #A6192E);
-  background-blend-mode: luminosity;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 100vh;
-  display: flex;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #fff;
-  padding: 24px 24px 0;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
 }
 
 .logo {
@@ -52,8 +53,28 @@ header {
   padding-top: 75px;
 }
 
+/*** HEADER ***/
+
+header {
+  width: 100%;
+  text-align: center;
+  background-image: url("../media/hero.png"), url("https://webresources.mq.edu.au/thisweek/wp-content/uploads/2018/02/Macquarie_University_Central_Courtyard_1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  padding: 24px 24px 0;
+}
+
 header h1 {
   display: none;
+}
+
+header a {
+  color: #fff;
 }
 
 .page-header-main {
@@ -101,7 +122,7 @@ header h1 {
 
 .search-button {
   background: no-repeat center;
-  background-image: url(../media/search_icon.png);
+  background-image: url("../media/search_icon.png");
   background-size: cover;
   border: none;
   padding: 0;
@@ -112,11 +133,11 @@ header h1 {
 }
 
 .search-button:hover {
-  background: url(../media/search-red-icon.png);
+  background: url("../media/search-red-icon.png");
 }
 
 .header-auth {
-  background: url(../media/user-icon.png) center no-repeat;
+  background: url("../media/user-icon.png") center no-repeat;
   background-size: cover;
   width: 32px;
   height: 32px;
@@ -124,24 +145,102 @@ header h1 {
 }
 
 .header-auth:hover {
-  background: url(../media/user-red-icon.png);
+  background: url("../media/user-red-icon.png");
 }
 
 #login_register {
   display: none;
 }
 
-main {
-  
-}
+/*** MAIN ***/
 
 section {
-  background-color: cyan;
+  background-image: linear-gradient(#A6192E, #76232F);
+}
+
+.widget {
+  background-image: linear-gradient(#F2F1ED, #EDEBE5);
+  color: #373A36;
+}
+
+.widget li, .widget a {
+  color: #373A36;
+}
+
+.widget a:hover {
+  color: #A6192E;
+}
+
+#primary-widgets {
+  display: flex;
+  flex-direction: column;
+  width: 16%;
+  float: right;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  margin-top: -75vh;
+  bottom: 60px;
+}
+
+#primary-widgets .widget {
+  margin: 24px 0 0 24px;
+  padding: 12%;
+}
+
+#weather-widget {
+  background-image: url("../media/billy-huynh-v9bnfMCyKbg-unsplash.jpg"), linear-gradient(#F2F1ED, #EDEBE5);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+.blog {
+  width: 66%;
+  margin-left: 8%;
+  position: static;
+}
+
+.blogpost {
+  overflow: scroll;
+  color: #373A36;
+  margin: 24px 0;
+}
+  
+
+.blogpost h2, .blogpost h3 {
+  width: 25%;
+}
+
+.blogpost h2 {
+  border-top: #A6192E solid 4px;
+}
+
+.blogpost h3 {
+  float: left;
+}
+
+.blogpost p {
+  width: 75%;
+  float: right; 
+}
+
+.blogpost p:nth-child(3) {
+  border-top: #A6192E solid 4px;
+  margin-top: -72px;
+}
+
+#secondary-widgets {
+  display: flex;
+  padding: 58px 8%;
+  justify-content: space-between;
 }
 
 footer {
-  background-color: coral;
+  background-color: #373A36;
   text-align: center;
-  color: aliceblue;
-  font-size: large;
+  position: relative;
+}
+
+footer p {
+  color: #fff;
 }
